@@ -54,6 +54,10 @@ jobs:
       - name: Build with gradle
         id: gradle
         env:
+          STORE_FILE: 'dummy.keystore'
+          STORE_PASSWORD: 'password'
+          KEY_ALIAS: 'alias'
+          KEY_PASSWORD: 'password'
           BUILD_ALPHA: ${{ github.event.inputs.Alpha }}
           BUILD_PREMIUM: ${{ github.event.inputs.Premium }}
           BUILD_FOSS: ${{ github.event.inputs.Foss }}
